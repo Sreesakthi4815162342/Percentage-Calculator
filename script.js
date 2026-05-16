@@ -11,8 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         gradeSelectors.forEach(selector => {
             const gradeValue = parseFloat(selector.value);
+            console.log('Grade Value:', gradeValue); // Debugging line
             totalPoints += gradeValue;
-            if (gradeValue <= 3) { // C (5) or lower
+            if (gradeValue <= 3) { 
                 hasLowGrade = true;
             }
         });
