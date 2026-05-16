@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         gradeSelectors.forEach(selector => {
             const gradeValue = parseFloat(selector.value);
             totalPoints += gradeValue;
-            if (gradeValue <= 4) { // C (5) or lower
+            if (gradeValue <= 3) { // C (5) or lower
                 hasLowGrade = true;
             }
         });
 
-        const percentage = totalPoints;
+        const percentage = totalPoints * (100/90);
         let eligibilityMessage = '';
 
         if (hasLowGrade) {
